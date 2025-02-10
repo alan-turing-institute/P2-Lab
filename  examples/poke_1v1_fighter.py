@@ -1,9 +1,9 @@
 # 1v1 fights for the pokemon for stats.
 # Author: Edmund Dable-Heath
 """
-    Setting each of the 150 pokemon to fight each other pokemon until either a cutoff is
-    reached or the variation of the win ratio over a history of s fights falls below a
-    threshold.
+Setting each of the 150 pokemon to fight each other pokemon until either a cutoff is
+reached or the variation of the win ratio over a history of s fights falls below a
+threshold.
 """
 
 # Imports include reference to potential scripts
