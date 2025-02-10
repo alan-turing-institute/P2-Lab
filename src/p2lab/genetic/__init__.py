@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 __all__ = (
-    "genetic_algorithm",
     "fitness",
+    "genetic_algorithm",
     "matching",
     "operations",
 )
