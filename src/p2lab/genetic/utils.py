@@ -61,7 +61,7 @@ def crossover(
         team2_pokemon = team2_old.pokemon
 
         # Randomly pick locus
-        locus = random.sample(range(0, num_pokemon), k=1)[0]
+        locus = random.sample(range(num_pokemon), k=1)[0]
 
         # Check that the sliciing here works but you get the idea
         team1_new_pokemeon = team1_pokemon[0:locus] + team2_pokemon[locus:num_pokemon]

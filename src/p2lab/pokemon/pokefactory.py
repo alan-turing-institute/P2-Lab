@@ -4,6 +4,7 @@ Pokemon Showdown (via poke-env)
 
 This is directly inspired by poke-env's diagostic_tools folder
 """
+
 from __future__ import annotations
 
 import numpy as np
@@ -68,7 +69,7 @@ class PokeFactory:
             raise ValueError(msg)
         if dexnum is None:
             dexnum = np.random.choice(list(self.dex2mon.keys()))
-        if generate_moveset or "moves" not in kwargs.keys():
+        if generate_moveset or "moves" not in kwargs:
             poss_moves = self.get_allowed_moves(dexnum)
             moves = (
                 np.random.choice(poss_moves, 4, replace=False)
@@ -76,16 +77,16 @@ class PokeFactory:
                 else poss_moves
             )
             kwargs["moves"] = moves
-        if "ivs" not in kwargs.keys():
+        if "ivs" not in kwargs:
             ivs = [31] * 6
             kwargs["ivs"] = ivs
-        if "evs" not in kwargs.keys():
+        if "evs" not in kwargs:
             # TODO: implement EV generation better
             evs = [510 // 6] * 6
             kwargs["evs"] = evs
-        if "level" not in kwargs.keys():
+        if "level" not in kwargs:
             kwargs["level"] = 100
-        if "ability" not in kwargs.keys():
+        if "ability" not in kwargs:
             kwargs["ability"] = np.random.choice(
                 list(self.get_allowed_abilities(dexnum).values())
             )

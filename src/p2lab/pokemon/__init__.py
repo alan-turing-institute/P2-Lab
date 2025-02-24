@@ -2,6 +2,6 @@ from __future__ import annotations
 
 __all__ = (
     "battles",
-    "teams",
     "premade",
+    "teams",
 )
